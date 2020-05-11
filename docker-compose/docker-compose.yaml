@@ -1,0 +1,13 @@
+
+database:
+  image: mysql:5.7
+  volumes:
+    - dbdata:/var/lib/mysql
+  restart: always
+  environment:
+    MYSQL_ROOT_PASSWORD: super_secret_root_password
+    MYSQL_DATABASE: amazing_database
+    MYSQL_USER: user123
+    MYSQL_PASSWORD: super_s3cur3_Pa55W0rD
+  ports:
+    - "3306:3306"
